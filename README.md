@@ -1,6 +1,6 @@
 # Capstone-1_ML_ZoomCamp_2024
 
-## Project Overview :
+## Project Overview:
 
 ### Space Mission Prediction
 Predicting the success rate of space missions using machine-learning models. 
@@ -23,7 +23,7 @@ The goal is to develop a machine-learning model that can accurately predict miss
 features like mission cost, duration, distance from Earth, and scientific yield.
 This solution has the potential to optimize decision-making processes in future space missions and reduce the risk of failures.
 
-## Dataset Details
+## Dataset Details: 
 
 The dataset used in this project is the **Space Missions Dataset**, sourced from Kaggle. It contains over 500 records, with detailed information on historical space missions.
 
@@ -40,7 +40,7 @@ The dataset used in this project is the **Space Missions Dataset**, sourced from
     <img src="images/images 2.jpg" />
 </div>
 
-## EDA (Exploratory Data Analysis)
+## EDA (Exploratory Data Analysis):
 
 Exploratory Data Analysis (EDA) was conducted to gain a deeper understanding of the dataset, uncover relationships between features, identify anomalies, and prepare the data for modeling. 
 Below are the key steps and insights derived during the analysis:
@@ -88,4 +88,73 @@ Below are the key steps and insights derived during the analysis:
 ### Outcome:
 EDA provided critical insights into the dataset, including feature relationships and distributions, enabling effective feature engineering and selection. 
 These insights laid the foundation for robust and accurate predictive modeling.
+
+## Model Training & Tuning:
+
+In this project, multiple machine-learning models were trained and tuned to predict the success rate of space missions. 
+The process included data preparation, model training, hyperparameter tuning, and evaluation.
+
+### Key Steps:
+
+1. **Data Splitting**:
+   - The dataset was split into training, validation, and test sets:
+     - **Training set**: 60% of the data.
+     - **Validation set**: 20% of the data.
+     - **Test set**: 20% of the data.
+   - The target variable, `Mission Success (%)`, was separated from the feature set.
+
+2. **Feature Vectorization**:
+   - Used `DictVectorizer` to transform categorical features into a numerical format suitable for machine learning models.
+
+3. **Model Training**:
+   - Trained the following models:
+     - **Linear Regression (with PCA)**: Reduced dimensionality using PCA before training.
+     - **Ridge Regression**: Performed hyperparameter tuning to find the best `alpha`.
+     - **Lasso Regression**: Tuned `alpha` values using `GridSearchCV`.
+     - **Decision Tree Regressor**: Controlled overfitting by tuning `max_depth`, `min_samples_split`, and `min_samples_leaf`.
+     - **Random Forest Regressor**: Trained an ensemble of decision trees to improve accuracy and generalization.
+     - **XGBoost Regressor**: Tuned hyperparameters like `n_estimators`, `max_depth`, and `learning_rate`.
+     - **Gradient Boosting Regressor**: Focused on minimizing error across iterations.
+     - **Neural Networks**: Trained multiple architectures with varying numbers of layers, dropout rates, and optimizers using Keras Tuner.
+
+4. **Evaluation Metrics**:
+   - Models were evaluated using the following metrics:
+     - **RMSE**: Root Mean Squared Error.
+     - **MAE**: Mean Absolute Error.
+     - **R²**: Coefficient of Determination.
+   - These metrics provided insights into the accuracy and generalization of the models.
+
+### Model Performance Comparison:
+
+| Model              | RMSE       | R² Score   | MAE       |
+|---------------------|------------|------------|-----------|
+| Linear Regression   | 5.018050   | 0.746838   | 3.940017  |
+| Ridge Regression    | 4.973625   | 0.751300   | 3.901738  |
+| Lasso Regression    | 4.943223   | 0.754331   | 3.875212  |
+| Decision Tree       | 5.096540   | 0.738856   | 3.217941  |
+| Random Forest       | 4.420864   | 0.803509   | 2.864930  |
+| XGBoost             | 4.708620   | 0.777097   | 3.381264  |
+| Gradient Boosting   | 4.281393   | 0.815711   | 2.852651  |
+
+
+### Hyperparameter Tuning:
+
+1. **Ridge and Lasso Regression**:
+   - Tuned the `alpha` parameter using `GridSearchCV`.
+   - Optimal `alpha` values:
+     - Ridge: 1000.0
+     - Lasso: 10.0
+
+2. **Neural Networks**:
+   - Used **Keras Tuner** for hyperparameter tuning.
+   - Tuned parameters include:
+     - Number of units per layer.
+     - Dropout rates.
+     - Optimizers (`adam`, `rmsprop`, `sgd`).
+
+### Key Insights:
+
+- The **Gradient Boosting Regressor** provided the best performance with an RMSE of 4.28, MAE of 2.85, and R² of 0.81.
+- **Random Forest** was a close second, showcasing strong generalization capabilities.
+- The **Neural Network** model demonstrated moderate performance but required further tuning for improvement.
 
