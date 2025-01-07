@@ -243,6 +243,3 @@ Before running the API, ensure the following libraries are installed:
 pip install flask
 pip install tensorflow --upgrade
 pip install joblib
-
-
-   
