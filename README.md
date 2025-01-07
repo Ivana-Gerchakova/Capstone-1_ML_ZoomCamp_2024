@@ -325,7 +325,7 @@ Future enhancements to this project could include:
 - Incorporating more advanced models or feature engineering techniques.
 - Expanding the dataset to include additional features or records for improved accuracy.
 
-This project demonstrates the power of machine learning and its potential to solve complex real-world problems, paving the way for more efficient and optimized solutions.
+This project demonstrates the power of machine-learning and its potential to solve complex real-world problems, paving the way for more efficient and optimized solutions.
 
  <div align="center">
   <h1>Aloha from Space 🌌🚀</h1>
