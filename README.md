@@ -9,7 +9,9 @@ By leveraging features such as mission cost, duration, and distance from Earth,t
 
 **Source**: The data is sourced from the Space Missions Dataset on Kaggle. [Kaggle - Space Missions Dataset](https://www.kaggle.com/datasets/sameerk2004/space-missions-dataset)
 
-<img src="images/images 1.jpg" />
+<div align="center">
+    <img src="images/images 1.jpg" />
+</div>
 
 ## Problem Description: 
 
@@ -33,5 +35,57 @@ The dataset used in this project is the **Space Missions Dataset**, sourced from
 - **Scientific Yield (points):** The scientific outcome of the mission.
 - **Mission Duration (years):** Duration of the mission in years.
 - **Crew Size:** The number of astronauts involved in the mission.
+  
+<div align="center">
+    <img src="images/images 2.jpg" />
+</div>
 
-<img src="images/images 2.jpg" />
+## EDA (Exploratory Data Analysis)
+
+Exploratory Data Analysis (EDA) was conducted to gain a deeper understanding of the dataset, uncover relationships between features, identify anomalies, and prepare the data for modeling. 
+Below are the key steps and insights derived during the analysis:
+
+### Key Steps:
+1. **Handling Missing Values and Dropping Unnecessary Columns:**
+   - Checked for missing values across all features and handled them.
+   - Dropped unnecessary columns that were irrelevant to the analysis.
+
+2. **Outlier Detection and Removal:**
+   - Detected and removed outliers using the Interquartile Range (IQR) method to improve model robustness and accuracy.
+
+3. **Descriptive Statistics:**
+   - Calculated summary statistics (mean, median, min, max, standard deviation) for numerical features to understand their distributions.
+
+4. **Correlation Analysis:**
+   - Generated a correlation heatmap to identify relationships between numerical features and their potential impact on mission success.
+
+5. **Visualization of Distributions:**
+   - Utilized various visualizations, including:
+     - **Histograms** and **boxplots** for numerical feature distributions.
+     - **Pie charts** to analyze target type distribution.
+     - **Bar plots** and **countplots** for categorical features.
+     - **Scatter plots** for relationships between numerical variables.
+     - **Bar charts** for visualizing top mission names.
+
+6. **Feature Importance Analysis:**
+   - Analyzed feature importance using multiple techniques:
+     - **Regression model coefficients**
+     - **Recursive Feature Elimination (RFE)**
+     - **Permutation Importance**
+     - **Drop-Column Importance**
+
+### Visual Insights:
+1. **Mission Success Distribution:**  
+   - Visualized the distribution of target types using a pie chart.
+     
+   ![Mission Success Distribution](images/png2.png)
+
+2. **Feature Importance:**  
+   - Displayed feature importance scores derived from various analysis methods.
+     
+   ![Feature Importance](images/png1.png)
+
+### Outcome:
+EDA provided critical insights into the dataset, including feature relationships and distributions, enabling effective feature engineering and selection. 
+These insights laid the foundation for robust and accurate predictive modeling.
+
