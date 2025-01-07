@@ -158,3 +158,49 @@ The process included data preparation, model training, hyperparameter tuning, an
 - **Random Forest** was a close second, showcasing strong generalization capabilities.
 - The **Neural Network** model demonstrated moderate performance but required further tuning for improvement.
 
+## Exporting Notebook to Script:
+
+To improve modularity and reproducibility, the logic from the Jupyter Notebook was exported into separate Python scripts. 
+This allows for more efficient development, debugging, and execution. Below is the structure of the exported scripts:
+
+### Structure of Scripts:
+1. **`preprocessing.py`**:
+   - Handles data loading, cleaning, and preprocessing steps.
+   - Removes unnecessary columns, handles missing values, and prepares data for modeling.
+
+2. **`eda.py`**:
+   - Performs exploratory data analysis (EDA).
+   - Includes visualizations such as histograms, correlation heatmaps, and feature distributions.
+
+3. **`feature_importance.py`**:
+   - Analyzes feature importance using multiple methods (RFE, permutation importance, drop-column importance).
+   - Saves results to assist in feature selection.
+
+4. **`train_model.py`**:
+   - Trains multiple machine learning models, including Linear Regression, Ridge, Lasso, Random Forest, XGBoost, and Gradient Boosting.
+   - Includes hyperparameter tuning and saves the best-performing model.
+
+5. **`evaluate_model.py`**:
+   - Evaluate the trained models using metrics such as RMSE, MAE, and R².
+   - Provides insights into model performance and comparisons.
+  
+   To execute these scripts:
+1. Prepare the data using `preprocessing.py`:
+   ```bash
+   python preprocessing.py
+
+2. Perform EDA using  `eda.py`:
+   ```bash
+   python eda.py
+   
+3. Feature importance using multiple methods `feature_importance.py`:
+   ```bash
+   python feature_importance.py
+
+4. Train the final model using `train_model.py`:
+   ```bash
+   python train_model.py
+
+5. Evaluate the model using `evaluate_model.py`:
+   ```bash
+   python evaluate_model.py
