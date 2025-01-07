@@ -239,7 +239,31 @@ Below are the key steps, important parts of the code, and instructions for runni
 
 Before running the API, ensure the following libraries are installed:
 
-```bash
-pip install flask
-pip install tensorflow --upgrade
-pip install joblib
+`pip install flask`
+
+`pip install tensorflow --upgrade`
+
+`pip install joblib`
+
+## Running the Flask API:
+
+### Save the Models:
+Ensure the trained models (`.pkl` and `.keras`) are saved in the project directory. These include:
+
+- `linear_model.pkl`
+- `random_forest_model.pkl`
+- `gradient_boosting_model.pkl`
+- `ridge_regression_model.pkl`
+- `lasso_regression_model.pkl`
+- `xgboost_model.pkl`
+- `decision_tree_model.pkl`
+- `dict_vectorizer.pkl`
+- `best_nn_model.keras`
+
+### Start the Flask Server:
+
+Run the Flask API script (e.g., `app.py`) to start the server:
+
+`python app.py`
+
+
