@@ -204,3 +204,19 @@ This allows for more efficient development, debugging, and execution. Below is t
 5. Evaluate the model using `evaluate_model.py`:
    ```bash
    python evaluate_model.py
+
+## Reproducibility:
+
+The project has been designed to ensure full reproducibility. All requirements have been met, including:
+
+1. **Data Accessibility**:  
+   Clear instructions are provided for downloading the dataset from Kaggle, ensuring all users can access the data.
+
+2. **Independent Scripts**:  
+   Each workflow stage (preprocessing, EDA, feature importance, train model, evaluate model) is modularized into separate Python scripts that can be executed independently.
+
+3. **Reproducible Workflow**:  
+   Detailed instructions are provided to run all scripts step-by-step, allowing anyone to replicate the results without issues.
+
+This ensures the project is fully reproducible and adheres to the required standards.
+   
