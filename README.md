@@ -2,7 +2,7 @@
 
 # Project Overview:
 
-### Space Mission Prediction
+### Space Mission Prediction:
 Predicting the success rate of space missions using machine-learning models. 
 This project explores various models to analyze and predict factors influencing the success of space missions. 
 By leveraging features such as mission cost, duration, and distance from Earth,the models aim to provide actionable insights for optimizing mission planning and resource allocation. 
