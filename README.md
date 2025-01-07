@@ -219,4 +219,32 @@ The project has been designed to ensure full reproducibility. All requirements h
    Detailed instructions are provided to run all scripts step-by-step, allowing anyone to replicate the results without issues.
 
 This ensures the project is fully reproducible and adheres to the required standards.
+
+## Model Deployment:
+
+The model is deployed as a REST API using **Flask**, allowing users to send requests with input features and receive predictions. 
+Below are the key steps, important parts of the code, and instructions for running the deployment.
+
+### Key Steps in Deployment:
+
+1. **Saving Models**:
+   - The trained models are saved in `.pkl` format for easy reusability.
+   - The best-performing neural network model is saved in `.keras` format for TensorFlow compatibility.
+
+2. **Flask API**:
+   - A Flask API is implemented to serve predictions.
+   - The API takes input features as JSON passes them to the loaded model, and returns the predicted result.
+
+### Prerequisites:
+
+Before running the API, ensure the following libraries are installed:
+
+```bash
+pip install flask
+pip install tensorflow --upgrade
+pip install joblib
+
+
+
+
    
