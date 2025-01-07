@@ -266,5 +266,19 @@ Run the Flask API script (e.g., `app.py`) to start the server:
 
 `python app.py`
 
+## Dependency and Environment Management:
 
+This project provides all necessary files to set up the required environment, ensuring reproducibility and ease of use.
+
+### Files Provided:
+
+1. **`requirements.txt`**:
+   - Lists all dependencies for the project.
+
+2. **`Pipfile`**:
+   - Used for virtual environment management with `pipenv`.
+   - Tracks packages and Python version.
+
+3. **`Pipfile.lock`**:
+   - Automatically generated file by `pipenv` to lock dependencies and ensure consistent installations.
 
