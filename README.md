@@ -75,7 +75,7 @@ Below are the key steps and insights derived during the analysis:
      - **Drop-Column Importance**
 
 ### Visual Insights:
-1. **Mission Success Distribution:**  
+1. **Target Types Distribution:**  
    - Visualized the distribution of target types using a pie chart.
      
    ![Mission Success Distribution](images/png2.png)
